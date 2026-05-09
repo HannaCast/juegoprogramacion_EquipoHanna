@@ -2,36 +2,53 @@
 
 ## Backend (Django)
 
-1. Crear base de datos MySQL llamada `juego`.
-2. Activar el entorno virtual si lo deseas.
-3. Ejecutar migraciones:
+### Requisitos
+- Python (recomendado: usar el lanzador `py` en Windows)
+- MySQL (crear una base de datos llamada `juego`)
+
+### Configuración
+1. (Opcional) Crear `juegoBackend/.env` a partir de `juegoBackend/.env.example` y ajustar credenciales.
+2. Instalar dependencias:
 
 ```
-c:/Users/chuch/OneDrive/Escritorio/AppProgramacion/.venv/Scripts/python.exe manage.py migrate
+cd juegoBackend
+py -m pip install -r requirements.txt
 ```
 
-4. Cargar preguntas de ejemplo:
+### Ejecutar
+1. Ejecutar migraciones:
 
 ```
-c:/Users/chuch/OneDrive/Escritorio/AppProgramacion/.venv/Scripts/python.exe manage.py seed_questions
+py manage.py migrate
 ```
 
-5. Iniciar servidor:
+2. Cargar preguntas de ejemplo:
 
 ```
-c:/Users/chuch/OneDrive/Escritorio/AppProgramacion/.venv/Scripts/python.exe manage.py runserver
+py manage.py seed_questions
+```
+
+3. Iniciar servidor:
+
+```
+py manage.py runserver
 ```
 
 ## Frontend (React)
 
+### Requisitos
+- Node.js (recomendado: 20.19+ o 22.12+)
+
+### Ejecutar
 1. Instalar dependencias:
 
 ```
+cd juegoFrontend
 npm install
 ```
 
 2. Iniciar desarrollo:
 
 ```
-npm run dev
+npm run dev -- --host
 ```
