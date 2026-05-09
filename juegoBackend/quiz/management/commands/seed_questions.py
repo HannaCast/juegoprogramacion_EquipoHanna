@@ -79,18 +79,6 @@ QUESTIONS = [
         "options": ["5", "6", "8", "9"],
         "correct_index": 2,
     },
-    {
-        "level": 11,
-        "text": "Que palabra clave se usa para retornar un valor?",
-        "options": ["return", "break", "yield", "stop"],
-        "correct_index": 0,
-    },
-    {
-        "level": 12,
-        "text": "Que metodo agrega un elemento al final de un array en JS?",
-        "options": ["push", "pop", "shift", "slice"],
-        "correct_index": 0,
-    },
 ]
 
 
